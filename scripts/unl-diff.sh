@@ -44,7 +44,6 @@ keys() {
 }
 
 # HEX|NODE|DOMAIN (NODE is base58 in parens; DOMAIN may be empty)
-# HEX|NODE|DOMAIN (NODE is base58 in parens; DOMAIN may be empty)
 key_node_domain() {
   load "$1" | awk -F'|' '
     /^Validator:/ {
