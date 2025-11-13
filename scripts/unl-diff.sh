@@ -92,20 +92,6 @@ echo "URL2: $URL2"
 summarize "$URL2"
 echo
 
-fmt_line() {
-  # args: hex node domain
-  local hex="$1" node="$2" dom="$3"
-  if [ -n "$node" ] && [ -n "$dom" ]; then
-    printf "%s (%s) | %s\n" "$hex" "$node" "$dom"
-  elif [ -n "$node" ]; then
-    printf "%s (%s)\n" "$hex" "$node"
-  elif [ -n "$dom" ]; then
-    printf "%s | %s\n" "$hex" "$dom"
-  else
-    printf "%s\n" "$hex"
-  fi
-}
-
 # Added
 echo "== Added (present in URL2, not in URL1) =="
 comm -13 "$k1" "$k2" | awk -v F="$f2" '

@@ -37,7 +37,7 @@ _Example request:_
 
 _Example response:_
 
-```
+```text
 There are 1 UNL's in this Validators List | Version 2 | Manifest Signature: ✓
 
 Publisher Master Public Key: ED2677ABFFD1B33AC6FBC3062B71F1E8397C1505E1C42C64D11AD1B28FF73F4734
@@ -281,11 +281,11 @@ Example:
 We can use the `xrpl_vl_tool` along with a script to diff two UNLs and see which validators were added or removed.
 
 ```bash
-Usage: ./scripts/unl-diff.sh <OLD_UNL_FILE> <NEW_UNL_FILE>
+Usage: ./scripts/unl-diff.sh <URL1> <URL2>
 ```
 
 ```bash
-./xrpdiff.sh https://vl.ripple.com https://unl.xrplf.org/unl/next.json
+./scripts/unl-diff.sh https://vl.ripple.com https://unl.xrplf.org/unl/next.json
 == Summary ==
 URL1: https://vl.ripple.com
 count=35 sequence=81 expires="2026-01-17 10:09:21" version=1 master=ED2677ABFFD1B33AC6FBC3062B71F1E8397C1505E1C42C64D11AD1B28FF73F4734
